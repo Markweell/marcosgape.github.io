@@ -1,0 +1,70 @@
+
+header{
+  background-color: rgba($color: #ff8800, $alpha: 1.0);
+  margin: 0;
+  padding: 10px;
+  ul{
+    margin: 0;
+    // padding: 0;
+    li{
+      list-style: none;
+      .bars{
+        height: 5px;
+        width: 30px;
+        margin: 5px 0;
+        background-color: black;
+        border-radius: 4px;
+      }
+      &:hover>.upBars{
+        transform: translate(0,10px) rotate(45deg);
+        animation-name: upBars;
+        animation-duration: 1.5s;
+      }
+      &:hover>.mediumBars{
+        opacity: 0;
+      }
+      &:hover>.bottomBars{
+        transform: translate(0,-10px) rotate(-45deg) ;
+        animation-name: bottomBars;
+        animation-duration: 1.5s;
+      }
+        .upBars{
+          // transform: translate(0,10px) rotate(45deg);
+          // animation-name: upBars;
+          // animation-duration: 1s;
+          // &:hover{
+          //   background-color: red;
+          // }
+        }
+        .mediumBars{
+          // opacity: 0;
+        }
+        .bottomBars{
+          // transform: translate(0,-10px) rotate(-45deg) ;
+          // animation-name: bottomBars;
+          // animation-duration: 1s;
+        }
+
+
+    }
+  }
+}
+@keyframes upBars {
+  from {
+    transform: translate(0) rotate(0deg);
+  }
+
+  to {
+    transform: translate(0,10px) rotate(45deg)
+  }
+}
+
+@keyframes bottomBars {
+  from {
+    transform: translate(0) rotate(0deg);
+  }
+
+  to {
+    transform: translate(0,-10px) rotate(-45deg);
+  }
+}
